@@ -1,0 +1,76 @@
+body {
+    background-color: #5FB5D6 !important;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5FB5D6;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-card:hover {
+    cursor: pointer;
+    transform: scaleY(1.1);
+}
+
+.quiz-btn {
+    background-color: #33e997 !important;
+    color: #505050 !important;
+    border-color: #7de7b2 !important;
+}
+
+.quiz-btn:hover {
+    transform: scaleY(1.1);
+}
+
+.bg-success, .bg-danger {
+    color: white !important;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-content {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 34px !important;
+}
+
+.no-pointer-event {
+    pointer-events: none;
+}
+
+.progress {
+    border-radius: unset !important;
+}
+
+.restar-game-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.restar-btn{
+    background-color: #33e997 !important;
+    color: #505050 !important;
+    border-color: #69dea3 !important;
+}
+
+.restar-btn:hover{
+    background-color: #36cd89 !important;
+}

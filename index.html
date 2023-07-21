@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QuizApp</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <!-- Bootstrap file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    
+
+<body onload="init()">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">QuizApp</span>
+        </div>
+    </nav>
+
+    <div class="content" id="endScreen" style="display: none;">
+        <div class="card card-img" style="width: 30rem;">
+            <img src="img/cup-ge1ef30c21_640.jpg" class="card-img-top card-img">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
+            </div>
+            <div class="card-body quiz-content">
+                <h5 class="card-title">Du hast es geschafft!</h5>
+                <span>Du hast <b id="amount-of-qustions">x</b> von <b id="amount-qustions">x</b> Fragen richtig
+                    beantwortet.</span>
+                <div class="restar-game-btn">
+                    <button onclick="restarGame()" class="btn btn-success restar-btn">Erneut spielen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="questionBody">
+        <div class="card" style="width: 30rem;">
+            <img src="img/back-to-school-g535919ca0_640.jpg" class="card-img-top">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" id="progress-bar">27%</div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" id="questiontext">Frage</h5>
+                <div class="alert alert-primary quiz-card" id="answer1" onclick="answer('answer1')">
+                    Antwort
+                </div>
+                <div class="alert alert-warning quiz-card" id="answer2" onclick="answer('answer2')">
+                    Antwort
+                </div>
+                <div class="alert alert-info quiz-card" id="answer3" onclick="answer('answer3')">
+                    Antwort
+                </div>
+                <div class="alert alert-dark quiz-card" id="answer4" onclick="answer('answer4')">
+                    Antwort
+                </div>
+                <div class="question-footer">
+                    <span><b id="question-number">1</b> von <b id="all-questions">5</b> Fragen</span>
+
+                    <button onclick="nextQuestion()" class="btn btn-success quiz-btn" id="next-button" disabled>Nächste
+                        Frage</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
